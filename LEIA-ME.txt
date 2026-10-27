@@ -1,0 +1,18 @@
+PERFECT SHOCK DATA - como abrir
+1. Extraia o zip inteiro para uma pasta (nao execute de dentro do zip).
+2. Precisa do Python 3.10+ (python.org, marcando "Add python.exe to PATH").
+   O atalho "python" da Microsoft Store NAO serve. Se nao tiver Python, o iniciar.bat oferece instalar via winget.
+3. Dois cliques em iniciar.bat. O navegador abre em http://127.0.0.1:5000.
+Dados ja carregados (bases_exemplo). Para recarregar do zero: apague data\perfect_shock.db e rode "python carregar_exemplos.py".
+Posicao no catalogo = ordem das linhas da planilha CatalogoAMD (nao ha coluna de pagina/posicao na base).
+
+GITHUB CODESPACES (alternativa sem instalar Python)
+1. Crie um repositorio PRIVADO e envie estes arquivos (o .gitignore ja protege banco e planilhas).
+2. Code > Codespaces > Create codespace. O app sobe sozinho e abre na porta 5000.
+3. Arraste as planilhas para uma pasta bases_exemplo no explorador e rode: python carregar_exemplos.py
+Obs.: o Codespaces gratuito tem limite mensal de horas e os dados ficam na nuvem do GitHub.
+
+ATUALIZAR OS DADOS (menu "Atualização de dados")
+Mantenha o MESMO NOME das planilhas (ex.: "DadosR-D e DES.xlsx", "Compra_de_amostra.xlsx", "CatalogoAMD.xlsx"...). Escolha os arquivos (um ou vários) ou substitua os da pasta bases_exemplo e clique
+em "Verificar a pasta". O sistema lê tudo, compara com o banco e mostra o que falta; ao clicar em "Aplicar" insere só o que não está (backup automático antes). Nada é apagado.
+Em Desenvolvimento, status/fornecedor/amostras são atualizados quando mudam na planilha; em Compra de amostras, só campos vazios são preenchidos (etapa e edições feitas no sistema são preservadas).
